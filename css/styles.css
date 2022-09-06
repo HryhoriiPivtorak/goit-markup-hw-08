@@ -1,0 +1,726 @@
+/* Палітра кольорів 
+background: #F5F5F5;
+background-header: #FFFFFF;
+background-futer: #2F303A;
+background-hero: #C4C4C4;
+background-team: #F5F4FA
+background-botton: #F5F4FA;
+accent-button: #2196F3;
+white-button: #FFFFFF;
+black-word: #212121;
+logo-blue: #2196F3;
+logo-black: #000000;
+main-color-txt: #212121;
+color-text: #757575;
+text-footer: rgba(255, 255, 255, 0.6);
+header-border-color: #ECECEC;
+button-active: #188CE8;
+gradient-color: #2F303A;
+background-icon: ##F5F4FA;
+background-icon-footer: rgba(255, 255, 255, 0.1);
+bg-position: rgba(47, 48, 58, 0.8)
+bg-example-works: rgba(33, 150, 243, 0.9);
+bg-modal: #fff;
+
+*/
+
+:root {
+  --accent-color: #2196f3;
+  --main-color-txt: #212121;
+  --main-bg-color: #fff;
+  --logo-black: #000000;
+  --button-white-txt: #fff;
+  --color-text: #757575;
+  --button-bg-color: #f5f4fa;
+  --team-bg: #f5f4fa;
+  --hero-bg: #c4c4c4;
+  --footer-bg: #2f303a;
+  --header-border: #ececec;
+  --works-border: #eeeeee;
+  --button-active: #188ce8;
+  /* --gradient-color: #2f303a66; */
+  --gradient-color-start: #2f303a66;
+  --gradient-color-end: #2f303a66;
+  --background-icon: #f5f4fa;
+  --icon-fill: #afb1b8;
+  --background-icon-footer: rgba(255, 255, 255, 0.1);
+  --bg-position: rgba(47, 48, 58, 0.8);
+  --footer-text: rgba(255, 255, 255, 0.6);
+  --bg-example-works: rgba(33, 150, 243, 0.9);
+  --bg-modal: #fff;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-color-txt);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+ul {
+  padding-left: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* outline: 2px solid tomato; */
+}
+
+/* Main-nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav,
+.contacts {
+  display: flex;
+}
+
+/* Отступи всім елементам крім останнього */
+.site-nav {
+  gap: 50px;
+}
+
+.nav {
+  margin-left: 93px;
+}
+
+.contacts {
+  margin-left: auto;
+  align-items: center;
+  gap: 30px;
+}
+
+.contacts .cont {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.cont {
+  gap: 10px;
+}
+
+.icon-cont {
+  align-self: center;
+  fill: currentColor;
+}
+
+/* Ховаємо єлементи з h2 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Скасував мітки у списках */
+.list,
+.social-network {
+  list-style: none;
+}
+
+.skills-flex {
+  display: flex;
+  gap: 30px;
+}
+
+/* Скасував підкреслювання у посиланнях */
+.link,
+.cont {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.addres {
+  /* margin-top: 20px; */
+  font-style: normal;
+}
+.item-addr + .item-addr {
+  margin-top: 9px;
+}
+
+/*Перша частина логотипу */
+.logo-blue {
+  color: var(--accent-color);
+}
+
+/* Друга частина логотипу */
+.logo-black {
+  color: var(--logo-black);
+}
+
+/* Друга частина логотипу у футері */
+.logo-white {
+  color: #fff;
+}
+
+/* Задав кольор тексту посилань, розширив паддінги, 
+перевів зі строчного у блочний  */
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--main-color-txt);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* Зміна кольору тексту (миш, таб) */
+.site-nav .link:hover,
+.site-nav .link:focus,
+.cont:hover,
+.cont:focus {
+  color: var(--accent-color);
+}
+
+.link.current {
+  color: var(--accent-color);
+}
+
+.item {
+  position: relative;
+}
+
+.link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 4px;
+  background: var(--accent-color);
+}
+
+.icon-cont {
+  fill: currentColor;
+}
+
+/* Сіренька смужечка під хедером */
+header {
+  border-bottom: 1px solid var(--header-border);
+}
+
+/* Головний текст */
+.hero {
+  padding-bottom: 200px;
+  padding-top: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      to right,
+      var(--gradient-color-start),
+      var(--gradient-color-end)
+    ),
+    url(../images/img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--hero-bg);
+}
+
+/* Шрифт для h1 "Ефективні рішення" */
+.hero-txt {
+  width: 696px;
+  margin: 0 auto 30px auto;
+
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
+/* Колір тексту скілів, професії, назви робіт */
+.skills-list,
+.prof,
+.work-list,
+.cont {
+  color: var(--color-text);
+
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Розмір шрифту для "Наші скіли" h3 */
+.skills-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+.icon-bg {
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--button-bg-color);
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+}
+
+.icon-skills {
+  display: block;
+  padding-left: auto;
+}
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.no-padding {
+  padding-bottom: 0;
+}
+
+.block-work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item-work {
+  position: relative;
+}
+
+.item-work-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  text-align: center;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--button-white-txt);
+  background: var(--bg-position);
+}
+
+/* Колір фону для секції "Наша команда" */
+.our-team {
+  background-color: var(--team-bg);
+}
+
+/* Розмір шрифту для тексту у секції "Наші скіли" */
+.skills-list {
+  font-weight: 400;
+  line-height: 1.71;
+  text-transform: none;
+}
+
+/* Розмір шрифту для секцій "Наші скіли" і "Наша команда", h2 */
+.subtitle,
+.team,
+.clients {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Розмір шрифту для імен у "Наша команда" */
+.command {
+  padding: 30px 0;
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.card-design {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Розмір шрифта для професій у "Наша команда" */
+.prof {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+
+/* Посилання на соціальні мережі */
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: var(--icon-fill);
+
+  background-color: var(--main-bg-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--button-white-txt);
+  background-color: var(--accent-color);
+}
+
+.icon-socials {
+  fill: currentColor;
+}
+
+/* Постійні клієнти */
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  color: var(--icon-fill);
+  border: 1px solid var(--icon-fill);
+  border-radius: 4px;
+}
+
+.icon-logo {
+  fill: currentColor;
+}
+
+.logo-link:focus,
+.logo-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Розмір шрифту для проєктів у "Приклади робіт", h3*/
+.project {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-color-txt);
+
+  margin-bottom: 4px;
+}
+
+/* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
+.work-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+/* Футер */
+.footer {
+  padding: 60px 0;
+  background-color: var(--footer-bg);
+}
+
+/* Колір тексту у футері */
+.list-footer {
+  color: var(--footer-text);
+}
+
+/* Тип шрифту у футері */
+.contacts-nav {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.addr-txt {
+  color: var(--button-white-txt);
+}
+
+/* Зміна кольору тексту у футері (миш, таб) */
+.list-footer:hover,
+.list-footer:focus {
+  color: var(--button-white-txt);
+}
+
+.footer-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.addres-block {
+  margin-right: 70px;
+}
+.join {
+  font-weight: 700;
+  color: var(--button-white-txt);
+  text-transform: uppercase;
+}
+
+.web-studio,
+.join {
+  margin-bottom: 20px;
+}
+
+/* Приєднуйтеся */
+
+.join-list {
+  display: flex;
+  gap: 10px;
+}
+.join-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--button-white-txt);
+  border-radius: 50%;
+  background-color: var(--background-icon-footer);
+}
+
+.join-icon:hover,
+.join-icon:focus {
+  background-color: var(--accent-color);
+}
+
+.join-icon-item {
+  fill: currentColor;
+}
+
+/* Кнопка фільтру*/
+.bt {
+  color: var(--main-color-txt);
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  padding: 6px 22px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Шрифт для КНОПКИ "Замовити послугу" */
+.but-oder {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  min-width: 216px;
+  align-items: center;
+  padding: 10px 32px;
+  /* justify-content: center; */
+  border-radius: 4px;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--button-white-txt);
+}
+
+.but-oder:hover,
+.but-oder:focus {
+  background-color: var(--button-active);
+}
+
+/* Зміна кольору кнопок */
+.bt.primery,
+.bt.secondary:hover,
+.bt.secondary:focus {
+  color: var(--button-white-txt);
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Кнопка фільтру не активна */
+.bt.secondary {
+  background-color: var(--button-bg-color);
+}
+
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+/* Сітка "Приклади робіт" */
+.example-work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.example-item {
+  display: block;
+  position: relative;
+}
+
+.example-item-txt {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 294px;
+  background: var(--bg-example-works);
+
+  padding: 63px 24px;
+  color: var(--button-white-txt);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  opacity: 0;
+}
+
+.example-item:hover,
+.example-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.example-item:hover .example-item-txt {
+  opacity: 1;
+}
+
+.examples {
+  padding: 20px 24px;
+  border: 1px solid var(--works-border);
+  border-top: none;
+}
+
+/* Модальне вікно */
+
+.container.main-nav {
+  position: relative;
+}
+
+.backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  /* transform: translate (-50%, -50%); */
+  width: 1600px;
+  height: 1024px;
+
+  background: rgba(0, 0, 0, 0.2);
+  outline: 1px solid red;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  outline: 1px solid greenyellow;
+  background-color: var(--bg-modal);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-svg {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  background: var(--bg-modal);
+}

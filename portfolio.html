@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title lang="en">WebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container main-nav">
+      <!--Логотип-->
+      <a class="logo link" href="./index.html"><span class="logo-blue" lang="en">Web</span><span class="logo-black"
+          lang="en">Studio</span></a>
+
+      <!--Меню навігації-->
+      <nav class="nav">
+        <ul class="site-nav list">
+
+          <li class="item">
+            <a class="link" href="./index.html">Студія</a>
+          </li>
+
+          <li class="item">
+            <a class="link current" href="./portfolio.html">Портфоліо</a>
+            <!-- <div class="item-nav"></div> -->
+          </li>
+
+          <li class="item">
+            <a class="link" href="">Контакти</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!--Електронна адреса і телефон-->
+      <ul class="contacts list">
+
+        <li class="item">
+          <a class="cont icon-email" lang="en" href="mailto:info@devstudio.com">
+            <svg class="icon-cont" width="16px" height="12px">
+              <use href="./images/icons.svg#mail"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+
+        <li class="item">
+          <a class="cont icon-tel" href="tel:+380961111111">
+            <svg class="icon-cont" width="10px" height="16px">
+              <use href="./images/icons.svg#smartphone"></use>
+            </svg>+38 096 111 11 11</a>
+        </li>
+
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Фільтр, Кнопки-->
+    <section class="section">
+      <div class="container">
+        <h1 class="visually-hidden">Портфоліо</h1>
+        <h2 class="visually-hidden">Фільтр</h2>
+        <ul class="list button-list">
+
+          <li class="button-item">
+            <button type="button" class="bt primery">Усі</button>
+          </li>
+
+          <li class="button-item">
+            <button type="button" class="bt secondary">Веб-сайти</button>
+          </li>
+
+          <li class="button-item">
+            <button type="button" class="bt secondary">Додатки</button>
+          </li>
+
+          <li class="button-item">
+            <button type="button" class="bt secondary">Дизайн</button>
+          </li>
+
+          <li class="button-item">
+            <button type="button" class="bt secondary">Маркетинг</button>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Приклади робіт -->
+      <div class="container">
+        <h2 class="visually-hidden">Приклади робіт</h2>
+        <ul class="list example-work">
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-4.jpg" width="370" height="294"
+                alt="Ноутбук з фотографіями розробників" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">Технокряк</h3>
+                <p class="work-list">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-5.jpg" width="370" height="294"
+                alt="Два баскетболіста" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">
+                  Постер <span lang="en">New Orlean vs Golden Star</span>
+                </h3>
+                <p class="work-list">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-6.jpg" width="370" height="294"
+                alt="Логотип ресторану морської їжі" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">Ресторан <span lang="en">Seafood</span></h3>
+                <p class="work-list">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href="">
+              <img src="./images/img-7.jpg" width="370" height="294" alt="Чорні навушники" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">Проєкт <span lang="en">Prime</span></h3>
+                <p class="work-list">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href="">
+              <img src="./images/img-8.jpg" width="370" height="294" alt="Дві коробочки: біла і коричнева" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">Проєкт <span lang="en">Boxes</span></h3>
+                <p class="work-list">Додаток</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href="">
+              <img src="./images/img-9.jpg" width="370" height="294" alt="Комп'ютерний монітор" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">
+                  <span lang="en">Inspiration has no Borders</span>
+                </h3>
+                <p class="work-list">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-10.jpg" width="370" height="294"
+                alt="Відкрита книга з фотографіями" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">
+                  Видання <span lang="en">Limited Edition</span>
+                </h3>
+                <p class="work-list">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-11.jpg" width="370" height="294"
+                alt="Бірка для одягу" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project">Проєкт <span lang="en">LAB</span></h3>
+                <p class="work-list">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="example">
+            <a class="example-item link" href=""><img src="./images/img-12.jpg" width="370" height="294"
+                alt="Ноутбук, руки на клавіатурі" />
+              <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+              <div class="examples">
+                <h3 class="project"><span lang="en">Business</span></h3>
+                <p class="work-list">Додаток</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer: Контакти-->
+  <footer class="footer">
+    <div class="container footer-info">
+      <div class="addres-block">
+        <div class="web-studio">
+          <a class="logo link" href="./index.html">
+            <span class="logo-blue" lang="en">Web</span>
+            <span class="logo-white" lang="en">Studio</span>
+          </a>
+        </div>
+        <address class="addres">
+          <ul class="contacts-nav list">
+
+            <li class="item-addr">
+              <a class="list-footer link addr-txt" href="https://goo.gl/maps/GKG1Pfcs3RUsKqncA" target="_blank"
+                rel="noopener noreferrer nofollow">
+                м. Київ, пр-т Лесі Українки, 26</a>
+            </li>
+
+            <li class="item-addr">
+              <a class="list-footer link" lang="en" href="mailto:ainfo@devstudio.com">ainfo@devstudio.com</a>
+            </li>
+
+            <li class="item-addr">
+              <a class="list-footer link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+
+          </ul>
+        </address>
+      </div>
+
+      <!-- Приєднуйтесь -->
+      <div>
+        <p class="join">приєднуйтесь</p>
+        <div>
+          <ul class="join-list list">
+
+            <li>
+              <a class="join-icon" href="http://instagram.com" target="_blank" rel="noopener noreferrer nofollow"
+                lang="en" aria-label="Instagram">
+                <svg class="join-icon-item" width="20px" height="20px">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="join-icon" href="http://twitter.com" target="_blank" rel="noopener noreferrer nofollow"
+                lang="en" aria-label="Instagram">
+                <svg class="join-icon-item" width="20px" height="20px">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="join-icon" href="http://facebook.com" target="_blank" rel="noopener noreferrer nofollow"
+                lang="en" aria-label="Instagram">
+                <svg class="join-icon-item" width="20px" height="20px">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="join-icon" href="http://linkedin.com" target="_blank" rel="noopener noreferrer nofollow"
+                lang="en" aria-label="Instagram">
+                <svg class="join-icon-item" width="20px" height="20px">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
