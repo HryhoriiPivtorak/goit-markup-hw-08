@@ -79,14 +79,12 @@ img {
 }
 
 .container {
-  position: relative;
-
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  /* outline: 2px solid tomato; */
+  outline: 2px solid tomato;
 }
 
 /* Main-nav */
@@ -683,7 +681,7 @@ header {
 
 /* Модальне вікно */
 
-.container.main-nav {
+.container {
   position: relative;
 }
 
