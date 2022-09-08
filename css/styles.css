@@ -22,6 +22,9 @@ bg-position: rgba(47, 48, 58, 0.8)
 bg-example-works: rgba(33, 150, 243, 0.9);
 bg-modal: #fff;
 
+trans-dur: 250ms;
+trans-funksh: cubic-bezier(0.4, 0, 0.2, 1);
+
 */
 
 :root {
@@ -48,6 +51,9 @@ bg-modal: #fff;
   --footer-text: rgba(255, 255, 255, 0.6);
   --bg-example-works: rgba(33, 150, 243, 0.9);
   --bg-modal: #fff;
+
+  --trans-dur: 250ms;
+  --trans-funksh: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -199,6 +205,10 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 /* Зміна кольору тексту (миш, таб) */
@@ -215,11 +225,15 @@ img {
 
 .item {
   position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .link.current::after {
   content: "";
+
   position: absolute;
+  display: block;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -227,6 +241,8 @@ img {
 
   border-radius: 4px;
   background: var(--accent-color);
+
+  transition: width 500ms;
 }
 
 .icon-cont {
@@ -282,6 +298,10 @@ header {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .team-list {
@@ -427,6 +447,14 @@ header {
   color: var(--icon-fill);
 
   background-color: var(--main-bg-color);
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
+
+  transition-property: background-color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .socials-link:hover,
@@ -457,6 +485,10 @@ header {
   color: var(--icon-fill);
   border: 1px solid var(--icon-fill);
   border-radius: 4px;
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .icon-logo {
@@ -494,8 +526,18 @@ header {
 }
 
 /* Колір тексту у футері */
+
 .list-footer {
   color: var(--footer-text);
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
+}
+/* Зміна кольору тексту у футері (миш, таб) */
+.list-footer:hover,
+.list-footer:focus {
+  color: var(--button-white-txt);
 }
 
 /* Тип шрифту у футері */
@@ -506,12 +548,6 @@ header {
 }
 
 .addr-txt {
-  color: var(--button-white-txt);
-}
-
-/* Зміна кольору тексту у футері (миш, таб) */
-.list-footer:hover,
-.list-footer:focus {
   color: var(--button-white-txt);
 }
 
@@ -540,6 +576,7 @@ header {
   display: flex;
   gap: 10px;
 }
+
 .join-icon {
   display: flex;
   justify-content: center;
@@ -551,6 +588,10 @@ header {
   color: var(--button-white-txt);
   border-radius: 50%;
   background-color: var(--background-icon-footer);
+
+  transition-property: background-color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .join-icon:hover,
@@ -602,11 +643,24 @@ header {
   border: none;
   background-color: var(--accent-color);
   color: var(--button-white-txt);
+
+  transition-property: background-color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .but-oder:hover,
 .but-oder:focus {
   background-color: var(--button-active);
+}
+
+/* Кнопка фільтру не активна */
+.bt.secondary {
+  background-color: var(--button-bg-color);
+
+  transition-property: background-color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 /* Зміна кольору кнопок */
@@ -618,11 +672,6 @@ header {
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-/* Кнопка фільтру не активна */
-.bt.secondary {
-  background-color: var(--button-bg-color);
 }
 
 .button-list {
@@ -640,27 +689,17 @@ header {
   gap: 30px;
 }
 
+.div {
+  overflow: hidden;
+}
+
 .example-item {
   display: block;
   position: relative;
-}
 
-.example-item-txt {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 294px;
-  background: var(--bg-example-works);
-
-  padding: 63px 24px;
-  color: var(--button-white-txt);
-
-  font-size: 18px;
-  line-height: 1.56;
-
-  opacity: 0;
+  transition-property: box-shadow;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-funksh);
 }
 
 .example-item:hover,
@@ -669,11 +708,38 @@ header {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.example-item-txt {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 294px;
+  background: var(--bg-example-works);
+
+  color: var(--button-white-txt);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  transform: translateY(100%);
+
+  transition: transform 1000ms var(--trans-funksh);
+
+  /* opacity: 0; */
+}
+
 .example-item:hover .example-item-txt {
+  transform: translateY(0);
   opacity: 1;
 }
 
-.examples {
+.name-work {
   padding: 20px 24px;
   border: 1px solid var(--works-border);
   border-top: none;
@@ -681,38 +747,41 @@ header {
 
 /* Модальне вікно */
 
-.container {
-  position: relative;
-}
-
 .backdrop {
   position: fixed;
-
   top: 0;
   left: 0;
-  /* transform: translate (-50%, -50%); */
-  width: 1600px;
-  height: 1024px;
-
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  outline: 1px solid red;
+
+  opacity: 1;
+
+  transition: opacity 250ms var(--trans-funksh);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 
   width: 528px;
   height: 581px;
-  outline: 1px solid greenyellow;
   background-color: var(--bg-modal);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform var(--trans-dur) var(--trans-funksh);
 }
 
 .btn-svg {
