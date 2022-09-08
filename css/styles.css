@@ -689,13 +689,14 @@ header {
   gap: 30px;
 }
 
-.div {
+/* .div {
   overflow: hidden;
-}
+} */
 
 .example-item {
   display: block;
   position: relative;
+  overflow: hidden;
 
   transition-property: box-shadow;
   transition-duration: var(--trans-dur);
@@ -714,8 +715,8 @@ header {
   justify-content: center;
   align-items: center;
 
-  padding: 24px 24px;
   position: absolute;
+  padding: 24px 24px;
   left: 0;
   top: 0;
   width: 100%;
