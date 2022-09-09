@@ -725,7 +725,8 @@ header {
   opacity: 0;
 }
 
-.example-item:hover .example-item-txt {
+.example-item:hover .example-item-txt,
+.example-item:focus .example-item-txt {
   transform: translateY(0);
   opacity: 1;
 }
