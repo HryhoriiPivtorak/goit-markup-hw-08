@@ -22,8 +22,8 @@ bg-position: rgba(47, 48, 58, 0.8)
 bg-example-works: rgba(33, 150, 243, 0.9);
 bg-modal: #fff;
 
-trans-dur: 250ms;
-trans-funksh: cubic-bezier(0.4, 0, 0.2, 1);
+time: 250ms;
+bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
 */
 
@@ -52,8 +52,8 @@ trans-funksh: cubic-bezier(0.4, 0, 0.2, 1);
   --bg-example-works: rgba(33, 150, 243, 0.9);
   --bg-modal: #fff;
 
-  --trans-dur: 250ms;
-  --trans-funksh: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -90,7 +90,7 @@ img {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 /* Main-nav */
@@ -206,9 +206,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition-property: color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: color var(--time) var(--bezier);
 }
 
 /* Зміна кольору тексту (миш, таб) */
@@ -300,8 +298,8 @@ header {
   letter-spacing: 0.02em;
 
   transition-property: color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition-duration: var(--time);
+  transition-timing-function: var(--bezier);
 }
 
 .team-list {
@@ -448,13 +446,8 @@ header {
 
   background-color: var(--main-bg-color);
 
-  transition-property: color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
-
-  transition-property: background-color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: color var(--time) var(--bezier),
+    background-color var(--time) var(--bezier);
 }
 
 .socials-link:hover,
@@ -486,9 +479,8 @@ header {
   border: 1px solid var(--icon-fill);
   border-radius: 4px;
 
-  transition-property: color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: color var(--time) var(--bezier),
+    border-color var(--time) var(--bezier);
 }
 
 .icon-logo {
@@ -530,11 +522,11 @@ header {
 .list-footer {
   color: var(--footer-text);
 
-  transition-property: color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: color var(--time) var(--bezier);
 }
-/* Зміна кольору тексту у футері (миш, таб) */
+
+/* Зміна кольору тексту у футері */
+
 .list-footer:hover,
 .list-footer:focus {
   color: var(--button-white-txt);
@@ -589,9 +581,7 @@ header {
   border-radius: 50%;
   background-color: var(--background-icon-footer);
 
-  transition-property: background-color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: background-color var(--time) var(--bezier);
 }
 
 .join-icon:hover,
@@ -638,15 +628,12 @@ header {
   min-width: 216px;
   align-items: center;
   padding: 10px 32px;
-  /* justify-content: center; */
   border-radius: 4px;
   border: none;
   background-color: var(--accent-color);
   color: var(--button-white-txt);
 
-  transition-property: background-color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: background-color var(--time) var(--bezier);
 }
 
 .but-oder:hover,
@@ -658,9 +645,9 @@ header {
 .bt.secondary {
   background-color: var(--button-bg-color);
 
-  transition-property: background-color;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition: color var(--time) var(--bezier),
+    background-color var(--time) var(--bezier),
+    box-shadow var(--time) var(--bezier);
 }
 
 /* Зміна кольору кнопок */
@@ -699,14 +686,18 @@ header {
   overflow: hidden;
 
   transition-property: box-shadow;
-  transition-duration: var(--trans-dur);
-  transition-timing-function: var(--trans-funksh);
+  transition-duration: var(--time);
+  transition-timing-function: var(--bezier);
 }
 
 .example-item:hover,
 .example-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.text-hidden {
+  position: relative;
+  overflow: hidden;
 }
 
 .example-item-txt {
@@ -729,10 +720,9 @@ header {
   line-height: 1.56;
 
   transform: translateY(100%);
+  transition: transform 1000ms var(--bezier);
 
-  transition: transform 1000ms var(--trans-funksh);
-
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .example-item:hover .example-item-txt {
@@ -758,7 +748,7 @@ header {
 
   opacity: 1;
 
-  transition: opacity 250ms var(--trans-funksh);
+  transition: opacity 250ms var(--bezier);
 }
 
 .backdrop.is-hidden .modal {
@@ -774,7 +764,6 @@ header {
   position: absolute;
   left: 50%;
   top: 50%;
-  /* transform: translate(-50%, -50%); */
 
   width: 528px;
   height: 581px;
@@ -782,7 +771,7 @@ header {
 
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform var(--trans-dur) var(--trans-funksh);
+  transition: transform var(--time) var(--bezier);
 }
 
 .btn-svg {
