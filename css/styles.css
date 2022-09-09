@@ -594,6 +594,7 @@ header {
 }
 
 /* Кнопка фільтру*/
+
 .bt {
   color: var(--main-color-txt);
 
@@ -612,6 +613,7 @@ header {
 }
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
+
 .but-oder {
   display: flex;
   margin-left: auto;
@@ -642,6 +644,7 @@ header {
 }
 
 /* Кнопка фільтру не активна */
+
 .bt.secondary {
   background-color: var(--button-bg-color);
 
@@ -651,6 +654,7 @@ header {
 }
 
 /* Зміна кольору кнопок */
+
 .bt.primery,
 .bt.secondary:hover,
 .bt.secondary:focus {
@@ -670,15 +674,12 @@ header {
 }
 
 /* Сітка "Приклади робіт" */
+
 .example-work {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-
-/* .div {
-  overflow: hidden;
-} */
 
 .example-item {
   display: block;
@@ -712,6 +713,7 @@ header {
   top: 0;
   width: 100%;
   height: 294px;
+
   background: var(--bg-example-works);
 
   color: var(--button-white-txt);
@@ -722,7 +724,7 @@ header {
   transform: translateY(100%);
   transition: transform var(--time) var(--bezier);
 
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .example-item:hover .example-item-txt,
