@@ -355,11 +355,12 @@ header {
 
 .item-work-text {
   position: absolute;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   width: 100%;
-  padding: 27px 0;
-  text-align: center;
+  height: 70px;
 
   font-weight: 700;
   line-height: 1.14;
@@ -370,11 +371,13 @@ header {
 }
 
 /* Колір фону для секції "Наша команда" */
+
 .our-team {
   background-color: var(--team-bg);
 }
 
 /* Розмір шрифту для тексту у секції "Наші скіли" */
+
 .skills-list {
   font-weight: 400;
   line-height: 1.71;
@@ -382,6 +385,7 @@ header {
 }
 
 /* Розмір шрифту для секцій "Наші скіли" і "Наша команда", h2 */
+
 .subtitle,
 .team,
 .clients {
@@ -393,6 +397,7 @@ header {
 }
 
 /* Розмір шрифту для імен у "Наша команда" */
+
 .command {
   padding: 30px 0;
 }
@@ -505,6 +510,7 @@ header {
 }
 
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
+
 .work-list {
   font-weight: 400;
   font-size: 16px;
@@ -512,6 +518,7 @@ header {
 }
 
 /* Футер */
+
 .footer {
   padding: 60px 0;
   background-color: var(--footer-bg);
@@ -533,6 +540,7 @@ header {
 }
 
 /* Тип шрифту у футері */
+
 .contacts-nav {
   font-style: normal;
   font-weight: 400;
