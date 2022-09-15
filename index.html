@@ -459,8 +459,8 @@
       </div>
 
       <!-- Приєднуйтесь -->
-      <div>
-        <p class="join">приєднуйтесь</p>
+      <div class="join">
+        <p class="join-text">приєднуйтесь</p>
         <ul class="join-list list">
 
           <li>
@@ -501,6 +501,24 @@
 
         </ul>
       </div>
+
+      <!-- Підпишіться на розсилку -->
+
+      <div class="subscription">
+        <p class="subscr-text">Підпишіться на розсилку</p>
+        <form action="" class="form-subscr">
+          <label for="" class="label-subscr">
+            <input class="input-subscr" type="text" name="email" placeholder="example@mail.com">
+          </label>
+          <button type="submit" class="btn-subscr">Підписатися
+            <svg class="icon-send" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+
     </div>
   </footer>
 
@@ -509,6 +527,35 @@
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
+      <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
+
+      <form class="form" action="" name="order-form">
+
+        <label class="form-field">
+          <input class="form-input" type="text" name="name" placeholder="Ім'я">
+        </label>
+
+        <label class="form-field">
+          <input class="form-input" type="tel" name="tel" placeholder="Телефон">
+        </label>
+
+        <label class="form-field">
+          <input class="form-input" type="email" name="email" placeholder="Пошта">
+        </label>
+
+        <label class="form-comment" class="form-comment">
+          <textarea class="form-textarea" name="comment" id="" placeholder="Коментар"></textarea>
+        </label>
+
+        <label class="form-check">
+          <input type="checkbox">Погоджуюся з розсилкою та приймаю Умови договору
+        </label>
+
+        <button class="form-btn" type="submit">Відправити</button>
+
+
+      </form>
+
       <button type="button" class="btn-svg" data-modal-close>
         <svg class="close-btn" width="30px" height="30px">
           <use href="./images/icons.svg#close">
