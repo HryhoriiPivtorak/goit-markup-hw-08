@@ -34,6 +34,7 @@ bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --logo-black: #000000;
   --button-white-txt: #fff;
   --color-text: #757575;
+  --text-textarea: #75757580;
   --button-bg-color: #f5f4fa;
   --team-bg: #f5f4fa;
   --hero-bg: #c4c4c4;
@@ -580,7 +581,7 @@ header {
 }
 
 .join-text,
-.subscription {
+.subscr-text {
   font-weight: 700;
   color: var(--button-white-txt);
   text-transform: uppercase;
@@ -598,10 +599,18 @@ header {
   margin-left: auto;
 }
 
+.form-subscr {
+  display: flex;
+}
+
 .input-subscr {
   width: 358px;
   height: 50px;
-  padding-left: 16px;
+  padding: 15px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
 
   color: var(--footer-text);
 
@@ -609,6 +618,10 @@ header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--footer-bg);
+}
+
+.input-subscr::placeholder {
+  color: var(--placeholder-footer);
 }
 
 .btn-subscr {
@@ -861,6 +874,21 @@ header {
   background: var(--bg-modal);
 }
 
+.btn-black {
+  opacity: 1;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.btn-blue {
+  opacity: 0;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.btn-svg:hover .btn-blue,
+.btn-svg:focus .btn-blue {
+  opacity: 1;
+}
+
 .modal-text {
   text-align: center;
   margin-bottom: 30px;
@@ -870,9 +898,7 @@ header {
   line-height: 1.15;
 }
 
-.form-field,
-.form-comment,
-.form-check {
+label {
   display: block;
 }
 
@@ -889,9 +915,14 @@ header {
 .form-textarea {
   height: 40px;
   padding-left: 42px;
+  padding-right: 42px;
+
+  outline: transparent;
 
   border: 1px solid var(--border-input-modal);
   border-radius: 4px;
+
+  transition: border-color var(--time) var(--bezier);
 }
 
 .form-comment {
@@ -907,7 +938,14 @@ header {
 }
 
 .form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-bottom: 30px;
+  gap: 8px;
+
+  text-align: center;
 }
 
 .form-btn {
@@ -942,10 +980,80 @@ header {
   letter-spacing: 0.01em;
 
   color: var(--color-text);
+
+  transition: color var(--time) var(--bezier);
 }
 .form-icon {
   position: absolute;
   top: 50%;
   left: 12px;
+
   transform: translateY(-50%);
+  transition: fill var(--time) var(--bezier);
+}
+
+::placeholder {
+  color: var(--text-textarea);
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-textarea:hover,
+.form-textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.form-input:hover + .name-field,
+.form-input:focus + .name-field,
+.form-textarea:hover + .name-comment,
+.form-textarea:focus + .name-comment {
+  color: var(--accent-color);
+}
+
+.form-input:hover ~ .form-icon,
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-link {
+  color: var(--accent-color);
+}
+
+.check-input {
+  text-align: center;
+  margin-left: 9px;
+}
+
+.check-text {
+  font-weight: 400;
+  line-height: 1.71;
+  /* identical to box height, or 171% */
+
+  color: var(--color-text);
+
+  user-select: none;
+}
+
+.icon-check {
+  opacity: 0;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.check-input:checked + .check-icons .icon-check {
+  opacity: 1;
+}
+
+.icon-uncheck {
+  opacity: 1;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.check-input:checked + .check-icons .icon-uncheck {
+  opacity: 0;
+}
+
+.check-input:focus + .check-icons {
+  outline: 2px solid var(--logo-black);
+  outline-offset: 1px;
+  border-radius: 2px;
 }

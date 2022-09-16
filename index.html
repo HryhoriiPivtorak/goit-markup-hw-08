@@ -518,7 +518,6 @@
         </form>
       </div>
 
-
     </div>
   </footer>
 
@@ -559,9 +558,15 @@
         </label>
 
         <label class="form-check">
-          <input type="checkbox">Погоджуюся з розсилкою та приймаю
-          <a href="" target="_blank">Умови договору</a>
-
+          <input type="checkbox" class="check-input">
+          <svg class="check-icons" width="16" height="15">
+            <use class="icon-uncheck" href="./images/icons.svg#icon-uncheck"></use>
+            <use class="icon-check" href="./images/icons.svg#icon-check"></use>
+          </svg>
+          <span class="check-text">
+            Погоджуюся з розсилкою та приймаю
+            <a href="" target="_blank" class="form-link">Умови договору</a>
+          </span>
         </label>
 
         <button class="form-btn" type="submit">Відправити</button>
@@ -570,9 +575,9 @@
       </form>
 
       <button type="button" class="btn-svg" data-modal-close>
-        <svg class="close-btn" width="30px" height="30px">
-          <use href="./images/icons.svg#close">
-          </use>
+        <svg class="close-btn" width="30" height="30">
+          <use class="btn-black" href="./images/icons.svg#close"></use>
+          <use class="btn-blue" href="./images/icons.svg#close-blue"></use>
         </svg>
       </button>
     </div>
