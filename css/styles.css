@@ -1027,7 +1027,6 @@ label {
 .check-text {
   font-weight: 400;
   line-height: 1.71;
-  /* identical to box height, or 171% */
 
   color: var(--color-text);
 
