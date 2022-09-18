@@ -986,7 +986,6 @@ label {
   transition: transform var(--time) var(--bezier);
 }
 
-.form-input:hover + .name-field,
 .form-input:focus + .name-field {
   transform: translateX(-42px) translateY(-240%);
 }
@@ -1013,7 +1012,6 @@ label {
   transition: transform var(--time) var(--bezier);
 }
 
-.form-textarea:hover + .name-comment,
 .form-textarea:focus + .name-comment {
   transform: translateX(-16px) translateY(-240%);
 }
