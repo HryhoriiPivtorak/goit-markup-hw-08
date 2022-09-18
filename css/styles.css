@@ -972,8 +972,6 @@ label {
   position: absolute;
   top: 35%;
   left: 42px;
-  /* top: -16px;
-  left: 0; */
 
   font-weight: 400;
   font-size: 12px;
@@ -998,8 +996,6 @@ label {
   position: absolute;
   top: 14px;
   left: 16px;
-  /* top: -16px;
-  left: 0; */
 
   font-weight: 400;
   font-size: 12px;
@@ -1038,12 +1034,12 @@ label {
   opacity: 1;
 }
 
-.form-comment::placeholder {
+.form-textarea::placeholder {
   opacity: 0;
   transition: opacity var(--time) var(--bezier);
 }
 
-.form-comment:focus::placeholder {
+.form-textarea:focus::placeholder {
   opacity: 1;
 }
 
