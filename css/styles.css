@@ -968,11 +968,12 @@ label {
   border: none;
 }
 
-.name-field,
-.name-comment {
+.name-field {
   position: absolute;
-  top: -16px;
-  left: 0;
+  top: 35%;
+  left: 42px;
+  /* top: -16px;
+  left: 0; */
 
   font-weight: 400;
   font-size: 12px;
@@ -982,7 +983,45 @@ label {
   color: var(--color-text);
 
   transition: color var(--time) var(--bezier);
+  transition: transform var(--time) var(--bezier);
 }
+
+.form-input:hover + .name-field,
+.form-input:focus + .name-field {
+  transform: translateX(-42px) translateY(-240%);
+}
+
+.form-input:not(:placeholder-shown) + .name-field {
+  transform: translateX(-42px) translateY(-240%);
+}
+
+.name-comment {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  /* top: -16px;
+  left: 0; */
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--color-text);
+
+  transition: color var(--time) var(--bezier);
+  transition: transform var(--time) var(--bezier);
+}
+
+.form-textarea:hover + .name-comment,
+.form-textarea:focus + .name-comment {
+  transform: translateX(-16px) translateY(-240%);
+}
+
+.form-textarea:not(:placeholder-shown) + .name-comment {
+  transform: translateX(-16px) translateY(-240%);
+}
+
 .form-icon {
   position: absolute;
   top: 50%;
@@ -992,7 +1031,26 @@ label {
   transition: fill var(--time) var(--bezier);
 }
 
-::placeholder {
+.form-input::placeholder {
+  opacity: 0;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.form-input:focus::placeholder {
+  opacity: 1;
+}
+
+.form-comment::placeholder {
+  opacity: 0;
+  transition: opacity var(--time) var(--bezier);
+}
+
+.form-comment:focus::placeholder {
+  opacity: 1;
+}
+
+.form-input::placeholder,
+.form-comment::placeholder {
   color: var(--text-textarea);
 }
 
