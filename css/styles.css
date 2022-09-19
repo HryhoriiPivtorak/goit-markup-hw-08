@@ -34,7 +34,7 @@ bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --logo-black: #000000;
   --button-white-txt: #fff;
   --color-text: #757575;
-  --text-textarea: #75757580;
+  --text-textarea: rgba(117, 117, 117, 0.502);
   --button-bg-color: #f5f4fa;
   --team-bg: #f5f4fa;
   --hero-bg: #c4c4c4;
