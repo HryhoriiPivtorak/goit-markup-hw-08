@@ -18,25 +18,27 @@
 <body>
   <header>
     <div class="container main-nav">
+
       <!--Логотип-->
-      <a class="logo link" href="./index.html"><span class="logo-blue" lang="en">Web</span><span class="logo-black"
-          lang="en">Studio</span></a>
+      <a class="logo link" href="./index.html">
+        <span class="logo__first" lang="en">Web</span>
+        <span class="logo__second" lang="en">Studio</span>
+      </a>
 
       <!--Меню навігації-->
       <nav class="nav">
-        <ul class="site-nav list">
+        <ul class="nav__list list">
 
-          <li class="item">
-            <a class="link" href="./index.html">Студія</a>
+          <li class="nav__item">
+            <a class="nav__link link" href="./index.html">Студія</a>
           </li>
 
-          <li class="item">
-            <a class="link current" href="./portfolio.html">Портфоліо</a>
-            <!-- <div class="item-nav"></div> -->
+          <li class="nav__item">
+            <a class="nav__link current  link" href="./portfolio.html">Портфоліо</a>
           </li>
 
-          <li class="item">
-            <a class="link" href="">Контакти</a>
+          <li class="nav__item">
+            <a class="nav__link link" href="">Контакти</a>
           </li>
 
         </ul>
@@ -45,23 +47,25 @@
       <!--Електронна адреса і телефон-->
       <ul class="contacts list">
 
-        <li class="item">
-          <a class="cont icon-email" lang="en" href="mailto:info@devstudio.com">
-            <svg class="icon-cont" width="16px" height="12px">
+        <li class="contacts__item">
+          <a class="contacts__cont link" lang="en" href="mailto:info@devstudio.com">
+            <svg class="contacts__icon" width="16px" height="12px">
               <use href="./images/icons.svg#mail"></use>
             </svg>
             info@devstudio.com
           </a>
         </li>
 
-        <li class="item">
-          <a class="cont icon-tel" href="tel:+380961111111">
-            <svg class="icon-cont" width="10px" height="16px">
+        <li class="contacts__item">
+          <a class="contacts__cont link" href="tel:+380961111111">
+            <svg class="contacts__icon" width="10px" height="16px">
               <use href="./images/icons.svg#smartphone"></use>
             </svg>+38 096 111 11 11</a>
         </li>
 
       </ul>
+
+
     </div>
   </header>
 
@@ -71,26 +75,26 @@
       <div class="container">
         <h1 class="visually-hidden">Портфоліо</h1>
         <h2 class="visually-hidden">Фільтр</h2>
-        <ul class="list button-list">
+        <ul class="list buttons">
 
-          <li class="button-item">
-            <button type="button" class="bt primery">Усі</button>
+          <li>
+            <button class="buttons__item primery" type="button">Усі</button>
           </li>
 
-          <li class="button-item">
-            <button type="button" class="bt secondary">Веб-сайти</button>
+          <li>
+            <button class="buttons__item secondary" type="button">Веб-сайти</button>
           </li>
 
-          <li class="button-item">
-            <button type="button" class="bt secondary">Додатки</button>
+          <li>
+            <button class="buttons__item secondary" type="button">Додатки</button>
           </li>
 
-          <li class="button-item">
-            <button type="button" class="bt secondary">Дизайн</button>
+          <li>
+            <button class="buttons__item secondary" type="button">Дизайн</button>
           </li>
 
-          <li class="button-item">
-            <button type="button" class="bt secondary">Маркетинг</button>
+          <li>
+            <button class="buttons__item secondary" type="button">Маркетинг</button>
           </li>
 
         </ul>
@@ -99,153 +103,153 @@
       <!-- Приклади робіт -->
       <div class="container">
         <h2 class="visually-hidden">Приклади робіт</h2>
-        <ul class="list example-work">
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+        <ul class="examples list">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-4.jpg" width="370" height="294" alt="Ноутбук з фотографіями розробників" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">Технокряк</h3>
-                <p class="work-list">Веб-сайт</p>
+              <div class="examples__work">
+                <h3 class="examples__project">Технокряк</h3>
+                <p class="examples__type">Веб-сайт</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-5.jpg" width="370" height="294" alt="Два баскетболіста" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">
+              <div class="examples__work">
+                <h3 class="examples__project">
                   Постер <span lang="en">New Orlean vs Golden Star</span>
                 </h3>
-                <p class="work-list">Дизайн</p>
+                <p class="examples__type">Дизайн</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-6.jpg" width="370" height="294" alt="Логотип ресторану морської їжі" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">Ресторан <span lang="en">Seafood</span></h3>
-                <p class="work-list">Дизайн</p>
+              <div class="examples__work">
+                <h3 class="examples__project">Ресторан <span lang="en">Seafood</span></h3>
+                <p class="examples__type">Дизайн</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-7.jpg" width="370" height="294" alt="Чорні навушники" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">Проєкт <span lang="en">Prime</span></h3>
-                <p class="work-list">Маркетинг</p>
+              <div class="examples__work">
+                <h3 class="examples__project">Проєкт <span lang="en">Prime</span></h3>
+                <p class="examples__type">Маркетинг</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-8.jpg" width="370" height="294" alt="Дві коробочки: біла і коричнева" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">Проєкт <span lang="en">Boxes</span></h3>
-                <p class="work-list">Додаток</p>
+              <div class="examples__work">
+                <h3 class="examples__project">Проєкт <span lang="en">Boxes</span></h3>
+                <p class="examples__type">Додаток</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-9.jpg" width="370" height="294" alt="Комп'ютерний монітор" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">
+              <div class="examples__work">
+                <h3 class="examples__project">
                   <span lang="en">Inspiration has no Borders</span>
                 </h3>
-                <p class="work-list">Веб-сайт</p>
+                <p class="examples__type">Веб-сайт</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-10.jpg" width="370" height="294" alt="Відкрита книга з фотографіями" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">
+              <div class="examples__work">
+                <h3 class="examples__project">
                   Видання <span lang="en">Limited Edition</span>
                 </h3>
-                <p class="work-list">Дизайн</p>
+                <p class="examples__type">Дизайн</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-11.jpg" width="370" height="294" alt="Бірка для одягу" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project">Проєкт <span lang="en">LAB</span></h3>
-                <p class="work-list">Маркетинг</p>
+              <div class="examples__work">
+                <h3 class="examples__project">Проєкт <span lang="en">LAB</span></h3>
+                <p class="examples__type">Маркетинг</p>
               </div>
             </a>
           </li>
 
-          <li class="example">
-            <a class="example-item link" href="">
-              <div class="text-hidden">
+          <li>
+            <a class="examples__card link" href="">
+              <div class="examples__text-hidden">
                 <img src="./images/img-12.jpg" width="370" height="294" alt="Ноутбук, руки на клавіатурі" />
-                <p class="example-item-txt">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <p class="examples__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="name-work">
-                <h3 class="project"><span lang="en">Business</span></h3>
-                <p class="work-list">Додаток</p>
+              <div class="examples__work">
+                <h3 class="examples__project"><span lang="en">Business</span></h3>
+                <p class="examples__type">Додаток</p>
               </div>
             </a>
           </li>
@@ -257,28 +261,31 @@
 
   <!--Footer: Логотип і адреса-->
   <footer class="footer">
-    <div class="container footer-info">
-      <div class="addres-block">
-        <div class="web-studio">
-          <a class="logo link" href="./index.html">
-            <span class="logo-blue" lang="en">Web</span>
-            <span class="logo-white" lang="en">Studio</span>
-          </a>
-        </div>
-        <address class="addres">
-          <ul class="contacts-nav list">
+    <div class="footer__info container">
+      <div>
+        <div class="footer__logo">
 
-            <li class="item-addr">
-              <a class="list-footer link addr-txt" href="https://goo.gl/maps/GKG1Pfcs3RUsKqncA" target="_blank"
+          <!-- Логотип -->
+          <a class="logo link" href="./index.html">
+            <span class="logo__first" lang="en">Web</span>
+            <span class="logo__second logo__second--white" lang="en">Studio</span>
+          </a>
+
+        </div>
+        <address class="address">
+          <ul class="address__list list">
+
+            <li class="address__item">
+              <a class="address__link link address__text" href="https://goo.gl/maps/GKG1Pfcs3RUsKqncA" target="_blank"
                 rel="noopener noreferrer nofollow">
                 м. Київ, пр-т Лесі Українки, 26</a>
             </li>
 
-            <li class="item-addr">
-              <a class="list-footer link" lang="en" href="mailto:ainfo@devstudio.com">ainfo@devstudio.com</a>
+            <li class="address__item">
+              <a class="address__link link" lang="en" href="mailto:ainfo@devstudio.com">ainfo@devstudio.com</a>
             </li>
-            <li class="item-addr">
-              <a class="list-footer link" href="tel:+380961111111">+38 096 111 11 11</a>
+            <li class="address__item">
+              <a class="address__link link" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
 
           </ul>
@@ -287,40 +294,40 @@
 
       <!-- Приєднуйтесь -->
       <div class="join">
-        <p class="join-text">приєднуйтесь</p>
-        <ul class="join-list list">
+        <p class="join__text">приєднуйтесь</p>
+        <ul class="join__list list">
 
           <li>
-            <a class="join-icon" href="http://instagram.com" target="_blank" rel="noopener noreferrer nofollow"
+            <a class="join__link" href="http://instagram.com" target="_blank" rel="noopener noreferrer nofollow"
               lang="en" aria-label="Instagram">
-              <svg class="join-icon-item" width="20px" height="20px">
+              <svg class="join__icon" width="20px" height="20px">
                 <use href="./images/icons.svg#instagram"></use>
               </svg>
             </a>
           </li>
 
           <li>
-            <a class="join-icon" href="http://twitter.com" target="_blank" rel="noopener noreferrer nofollow" lang="en"
+            <a class="join__link" href="http://twitter.com" target="_blank" rel="noopener noreferrer nofollow" lang="en"
               aria-label="Instagram">
-              <svg class="join-icon-item" width="20px" height="20px">
+              <svg class="join__icon" width="20px" height="20px">
                 <use href="./images/icons.svg#twitter"></use>
               </svg>
             </a>
           </li>
 
           <li>
-            <a class="join-icon" href="http://facebook.com" target="_blank" rel="noopener noreferrer nofollow" lang="en"
-              aria-label="Instagram">
-              <svg class="join-icon-item" width="20px" height="20px">
+            <a class="join__link" href="http://facebook.com" target="_blank" rel="noopener noreferrer nofollow"
+              lang="en" aria-label="Instagram">
+              <svg class="join__icon" width="20px" height="20px">
                 <use href="./images/icons.svg#facebook"></use>
               </svg>
             </a>
           </li>
 
           <li>
-            <a class="join-icon" href="http://linkedin.com" target="_blank" rel="noopener noreferrer nofollow" lang="en"
-              aria-label="Instagram">
-              <svg class="join-icon-item" width="20px" height="20px">
+            <a class="join__link" href="http://linkedin.com" target="_blank" rel="noopener noreferrer nofollow"
+              lang="en" aria-label="Instagram">
+              <svg class="join__icon" width="20px" height="20px">
                 <use href="./images/icons.svg#linkedin"></use>
               </svg>
             </a>
@@ -332,19 +339,18 @@
       <!-- Підпишіться на розсилку -->
 
       <div class="subscription">
-        <p class="subscr-text">Підпишіться на розсилку</p>
-        <form action="" class="form-subscr">
-          <label for="" class="label-subscr">
-            <input class="input-subscr" type="email" name="email" placeholder="example@example.com" required>
+        <p class="subscription__text">Підпишіться на розсилку</p>
+        <form class="subscription__form">
+          <label class="subscription__label">
+            <input class="subscription__input" type="email" name="email" placeholder="example@mail.com" required>
           </label>
-          <button type="submit" class="btn-subscr">Підписатися
-            <svg class="icon-send" width="24" height="24">
+          <button class="subscription__btn" type="submit">Підписатися
+            <svg class="subscription__icon" width="24" height="24">
               <use href="./images/icons-2.svg#icon-send"></use>
             </svg>
           </button>
         </form>
       </div>
-
 
     </div>
   </footer>

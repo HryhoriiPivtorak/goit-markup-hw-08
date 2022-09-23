@@ -8,7 +8,7 @@ background-botton: #F5F4FA;
 accent-button: #2196F3;
 white-button: #FFFFFF;
 black-word: #212121;
-logo-blue: #2196F3;
+logo-first: #2196F3;
 logo-black: #000000;
 main-color-txt: #212121;
 color-text: #757575;
@@ -87,6 +87,14 @@ img {
   height: auto;
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -95,48 +103,6 @@ img {
   margin-left: auto;
   /* outline: 2px solid tomato; */
 }
-
-/* Main-nav */
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav,
-.contacts {
-  display: flex;
-}
-
-/* Отступи всім елементам крім останнього */
-.site-nav {
-  gap: 50px;
-}
-
-.nav {
-  margin-left: 93px;
-}
-
-.contacts {
-  margin-left: auto;
-  align-items: center;
-  gap: 30px;
-}
-
-.contacts .cont {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.cont {
-  gap: 10px;
-}
-
-.icon-cont {
-  align-self: center;
-  fill: currentColor;
-}
-
-/* Ховаємо єлементи з h2 */
 
 .visually-hidden {
   position: absolute;
@@ -152,23 +118,54 @@ img {
   overflow: hidden;
 }
 
-/* Скасував мітки у списках */
+/**
+  |============================
+  | Main-nav
+  |============================
+*/
 
-.list,
-.social-network {
-  list-style: none;
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
-.skills-flex {
+.nav__list,
+.contacts {
   display: flex;
+}
+
+.nav__list {
+  gap: 50px;
+}
+
+.nav {
+  margin-left: 93px;
+}
+
+.contacts {
+  margin-left: auto;
+  align-items: center;
   gap: 30px;
 }
 
-/* Скасував підкреслювання у посиланнях */
+.contacts .contacts__cont {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 
-.link,
-.cont {
-  text-decoration: none;
+.contacts__cont {
+  gap: 10px;
+}
+
+.contacts__icon {
+  align-self: center;
+  fill: currentColor;
+}
+
+.skills__list {
+  display: flex;
+  gap: 30px;
 }
 
 .logo {
@@ -178,36 +175,33 @@ img {
   line-height: 1.19;
 }
 
-.addres {
-  font-style: normal;
-}
-
-.item-addr + .item-addr {
-  margin-top: 9px;
-}
-
 /*Перша частина логотипу */
 
-.logo-blue {
+.logo__first {
   color: var(--accent-color);
 }
 
 /* Друга частина логотипу */
 
-.logo-black {
+.logo__second {
   color: var(--logo-black);
 }
 
 /* Друга частина логотипу у футері */
 
-.logo-white {
+.logo__second--white {
   color: #fff;
 }
 
-/* Задав кольор тексту посилань, розширив паддінги, 
-перевів зі строчного у блочний  */
+.address {
+  font-style: normal;
+}
 
-.site-nav .link {
+.address__item + .address__item {
+  margin-top: 9px;
+}
+
+.nav__list .nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -220,26 +214,25 @@ img {
   transition: color var(--time) var(--bezier);
 }
 
-/* Зміна кольору тексту (миш, таб) */
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.cont:hover,
-.cont:focus {
+.nav__list .nav__link:hover,
+.nav__list .nav__link:focus,
+.contacts__cont:hover,
+.contacts__cont:focus {
   color: var(--accent-color);
 }
 
-.link.current {
+.nav__link.current {
   color: var(--accent-color);
 }
 
-.item {
+.nav__item,
+.contacts__item {
   position: relative;
   padding-left: 3px;
   padding-right: 3px;
 }
 
-.link.current::after {
+.nav__link.current::after {
   content: "";
 
   position: absolute;
@@ -255,7 +248,7 @@ img {
   transition: width 500ms;
 }
 
-.icon-cont {
+.contacts__icon {
   fill: currentColor;
 }
 
@@ -288,7 +281,7 @@ header {
 
 /* Шрифт для h1 "Ефективні рішення" */
 
-.hero-txt {
+.hero__title {
   width: 696px;
   margin: 0 auto 30px auto;
 
@@ -301,12 +294,18 @@ header {
   letter-spacing: 0.06em;
 }
 
-/* Колір тексту скілів, професії, назви робіт */
+.skills__text {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+  text-transform: none;
 
-.skills-list,
-.prof,
-.work-list,
-.cont {
+  color: var(--color-text);
+}
+
+.person__prof,
+.examples__type,
+.contacts__cont {
   color: var(--color-text);
 
   font-weight: 500;
@@ -318,24 +317,31 @@ header {
   transition-timing-function: var(--bezier);
 }
 
-.team-list {
+/**
+  |============================
+  | Team
+  |============================
+*/
+
+/* Колір фону для секції "Наша команда" */
+
+.team {
+  background-color: var(--team-bg);
+}
+
+.team__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-/* Розмір шрифту для "Наші скіли" h3 */
+/**
+  |============================
+  | Skills
+  |============================
+*/
 
-.skills-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-}
-
-.icon-bg {
+.skills__icon {
   display: flex;
   height: 120px;
   justify-content: center;
@@ -347,9 +353,13 @@ header {
   margin-bottom: 30px;
 }
 
-.icon-skills {
-  display: block;
-  padding-left: auto;
+.skills__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 .section {
@@ -361,17 +371,17 @@ header {
   padding-bottom: 0;
 }
 
-.block-work {
+.our-work__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.item-work {
+.our-work__item {
   position: relative;
 }
 
-.item-work-text {
+.our-work__text {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -388,24 +398,10 @@ header {
   background: var(--bg-position);
 }
 
-/* Колір фону для секції "Наша команда" */
-
-.our-team {
-  background-color: var(--team-bg);
-}
-
-/* Розмір шрифту для тексту у секції "Наші скіли" */
-
-.skills-list {
-  font-weight: 400;
-  line-height: 1.71;
-  text-transform: none;
-}
-
 /* Розмір шрифту для секцій "Наші скіли" і "Наша команда", h2 */
 
-.subtitle,
-.team,
+.our-work__subtitle,
+.our-team__subtitle,
 .clients {
   margin-bottom: 50px;
   font-weight: 700;
@@ -416,11 +412,11 @@ header {
 
 /* Розмір шрифту для імен у "Наша команда" */
 
-.command {
+.person {
   padding: 30px 0;
 }
 
-.team-name {
+.person__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -430,7 +426,7 @@ header {
   margin-bottom: 10px;
 }
 
-.card-design {
+.team__item {
   background: #ffffff;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -440,7 +436,7 @@ header {
 
 /* Розмір шрифта для професій у "Наша команда" */
 
-.prof {
+.person__prof {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -451,13 +447,13 @@ header {
 
 /* Посилання на соціальні мережі */
 
-.socials {
+.person__socials {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 
-.socials-link {
+.person__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,25 +470,29 @@ header {
     background-color var(--time) var(--bezier);
 }
 
-.socials-link:hover,
-.socials-link:focus {
+.person__link:hover,
+.person__link:focus {
   color: var(--button-white-txt);
   background-color: var(--accent-color);
 }
 
-.icon-socials {
+.person__icon {
   fill: currentColor;
 }
 
-/* Постійні клієнти */
+/**
+  |============================
+  | Постійні клієнти
+  |============================
+*/
 
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
-.logo-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,19 +507,23 @@ header {
     border-color var(--time) var(--bezier);
 }
 
-.icon-logo {
+.clients__icon {
   fill: currentColor;
 }
 
-.logo-link:focus,
-.logo-link:hover {
+.clients__link:focus,
+.clients__link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-/* Розмір шрифту для проєктів у "Приклади робіт", h3*/
+/**
+  |============================
+  | Приклади робіт
+  |============================
+*/
 
-.project {
+.examples__project {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -531,7 +535,7 @@ header {
 
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
 
-.work-list {
+.examples__type {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -546,7 +550,7 @@ header {
 
 /* Колір тексту у футері */
 
-.list-footer {
+.address__link {
   color: var(--footer-text);
 
   transition: color var(--time) var(--bezier);
@@ -554,24 +558,24 @@ header {
 
 /* Зміна кольору тексту у футері */
 
-.list-footer:hover,
-.list-footer:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--button-white-txt);
 }
 
 /* Тип шрифту у футері */
 
-.contacts-nav {
+.address__list {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
 }
 
-.addr-txt {
+.address__text {
   color: var(--button-white-txt);
 }
 
-.footer-info {
+.footer__info {
   display: flex;
   align-items: baseline;
 }
@@ -580,16 +584,16 @@ header {
   margin-left: 70px;
 }
 
-.join-text,
-.subscr-text {
+.join__text,
+.subscription__text {
   font-weight: 700;
   color: var(--button-white-txt);
   text-transform: uppercase;
 }
 
-.web-studio,
-.join-text,
-.subscr-text {
+.footer__logo,
+.join__text,
+.subscription__text {
   margin-bottom: 20px;
 }
 
@@ -599,11 +603,11 @@ header {
   margin-left: auto;
 }
 
-.form-subscr {
+.subscription__form {
   display: flex;
 }
 
-.input-subscr {
+.subscription__input {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -624,7 +628,7 @@ header {
   color: var(--placeholder-footer);
 }
 
-.btn-subscr {
+.subscription__btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -646,16 +650,16 @@ header {
   cursor: pointer;
 }
 
-.icon-send {
+.subscription__icon {
   margin-left: 10px;
 }
 
-.join-list {
+.join__list {
   display: flex;
   gap: 10px;
 }
 
-.join-icon {
+.join__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -670,12 +674,12 @@ header {
   transition: background-color var(--time) var(--bezier);
 }
 
-.join-icon:hover,
-.join-icon:focus {
+.join__link:hover,
+.join__link:focus {
   background-color: var(--accent-color);
 }
 
-.join-icon-item {
+.join__icon {
   fill: currentColor;
 }
 
@@ -683,7 +687,7 @@ header {
 
 /* Кнопка фільтру*/
 
-.bt {
+.buttons__item {
   color: var(--main-color-txt);
 
   font-family: inherit;
@@ -702,7 +706,7 @@ header {
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
 
-.but-oder {
+.hero__but {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -726,14 +730,14 @@ header {
   transition: background-color var(--time) var(--bezier);
 }
 
-.but-oder:hover,
-.but-oder:focus {
+.hero__but:hover,
+.hero__but:focus {
   background-color: var(--button-active);
 }
 
 /* Кнопка фільтру не активна */
 
-.bt.secondary {
+.buttons__item.secondary {
   background-color: var(--button-bg-color);
 
   transition: color var(--time) var(--bezier),
@@ -743,9 +747,9 @@ header {
 
 /* Зміна кольору кнопок */
 
-.bt.primery,
-.bt.secondary:hover,
-.bt.secondary:focus {
+.buttons__item.primery,
+.buttons__item.secondary:hover,
+.buttons__item.secondary:focus {
   color: var(--button-white-txt);
   background-color: var(--accent-color);
 
@@ -753,7 +757,7 @@ header {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button-list {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -763,13 +767,13 @@ header {
 
 /* Сітка "Приклади робіт" */
 
-.example-work {
+.examples {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.example-item {
+.examples__card {
   display: block;
   position: relative;
   overflow: hidden;
@@ -779,17 +783,17 @@ header {
   transition-timing-function: var(--bezier);
 }
 
-.example-item:hover,
-.example-item:focus {
+.examples__card:hover,
+.examples__card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.text-hidden {
+.examples__text-hidden {
   position: relative;
   overflow: hidden;
 }
 
-.example-item-txt {
+.examples__text {
   content: "";
   display: flex;
   justify-content: center;
@@ -815,13 +819,13 @@ header {
   /* opacity: 0; */
 }
 
-.example-item:hover .example-item-txt,
-.example-item:focus .example-item-txt {
+.examples__card:hover .examples__text,
+.examples__card:focus .examples__text {
   transform: translateY(0);
   opacity: 1;
 }
 
-.name-work {
+.examples__work {
   padding: 20px 24px;
   border: 1px solid var(--works-border);
   border-top: none;
@@ -889,7 +893,7 @@ header {
   opacity: 1;
 }
 
-.modal-text {
+.modal__text {
   text-align: center;
   margin-bottom: 30px;
 
@@ -902,17 +906,15 @@ label {
   display: block;
 }
 
-.form-field {
+.form__field {
   margin-bottom: 28px;
   position: relative;
 }
-.form-input,
-.form-comment {
-  width: 100%;
-}
 
-.form-input,
-.form-textarea {
+.form__input,
+.form__textarea {
+  width: 100%;
+
   height: 40px;
   padding-left: 42px;
   padding-right: 42px;
@@ -925,19 +927,19 @@ label {
   transition: border-color var(--time) var(--bezier);
 }
 
-.form-comment {
+.form__comment {
   position: relative;
   margin-bottom: 20px;
 }
 
-.form-textarea {
+.form__textarea {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
   resize: none;
 }
 
-.form-check {
+.form__check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -948,7 +950,7 @@ label {
   text-align: center;
 }
 
-.form-btn {
+.form__btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -968,7 +970,7 @@ label {
   border: none;
 }
 
-.name-field {
+.form__text {
   position: absolute;
   top: 35%;
   left: 42px;
@@ -984,15 +986,15 @@ label {
   transition: transform var(--time) var(--bezier);
 }
 
-.form-input:focus + .name-field {
+.form__input:focus + .form__text {
   transform: translateX(-42px) translateY(-240%);
 }
 
-.form-input:not(:placeholder-shown) + .name-field {
+.form__input:not(:placeholder-shown) + .form__text {
   transform: translateX(-42px) translateY(-240%);
 }
 
-.name-comment {
+.form__textarea-text {
   position: absolute;
   top: 14px;
   left: 16px;
@@ -1008,15 +1010,15 @@ label {
   transition: transform var(--time) var(--bezier);
 }
 
-.form-textarea:focus + .name-comment {
+.form__textarea:focus + .form__textarea-text {
   transform: translateX(-16px) translateY(-240%);
 }
 
-.form-textarea:not(:placeholder-shown) + .name-comment {
+.form__textarea:not(:placeholder-shown) + .form__textarea-text {
   transform: translateX(-16px) translateY(-240%);
 }
 
-.form-icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -1025,45 +1027,45 @@ label {
   transition: fill var(--time) var(--bezier);
 }
 
-.form-input::placeholder {
+.form__input::placeholder {
   opacity: 0;
   transition: opacity var(--time) var(--bezier);
 }
 
-.form-input:focus::placeholder {
+.form__input:focus::placeholder {
   opacity: 1;
 }
 
-.form-textarea::placeholder {
+.form__textarea::placeholder {
   opacity: 0;
   transition: opacity var(--time) var(--bezier);
 }
 
-.form-textarea:focus::placeholder {
+.form__textarea:focus::placeholder {
   opacity: 1;
 }
 
-.form-input::placeholder,
-.form-comment::placeholder {
+.form__input::placeholder,
+.form__comment::placeholder {
   color: var(--text-textarea);
 }
 
-.form-input:hover,
-.form-input:focus,
-.form-textarea:hover,
-.form-textarea:focus {
+.form__input:hover,
+.form__input:focus,
+.form__textarea:hover,
+.form__textarea:focus {
   border-color: var(--accent-color);
 }
 
-.form-input:hover + .name-field,
-.form-input:focus + .name-field,
-.form-textarea:hover + .name-comment,
-.form-textarea:focus + .name-comment {
+.form__input:hover + .form__text,
+.form__input:focus + .form__text,
+.form__textarea:hover + .form__textarea-text,
+.form__textarea:focus + .form__textarea-text {
   color: var(--accent-color);
 }
 
-.form-input:hover ~ .form-icon,
-.form-input:focus ~ .form-icon {
+.form__input:hover ~ .form__icon,
+.form__input:focus ~ .form__icon {
   fill: var(--accent-color);
 }
 
@@ -1071,12 +1073,12 @@ label {
   color: var(--accent-color);
 }
 
-.check-input {
+.form__check-input {
   text-align: center;
   margin-left: 9px;
 }
 
-.check-text {
+.form__check-text {
   font-weight: 400;
   line-height: 1.71;
 
@@ -1085,25 +1087,25 @@ label {
   user-select: none;
 }
 
-.icon-check {
+.form__icon-check {
   opacity: 0;
   transition: opacity var(--time) var(--bezier);
 }
 
-.check-input:checked + .check-icons .icon-check {
+.form__check-input:checked + .form__check-icons .form__icon-check {
   opacity: 1;
 }
 
-.icon-uncheck {
+.form__icon-uncheck {
   opacity: 1;
   transition: opacity var(--time) var(--bezier);
 }
 
-.check-input:checked + .check-icons .icon-uncheck {
+.form__check-input:checked + .form__check-icons .form__icon-uncheck {
   opacity: 0;
 }
 
-.check-input:focus + .check-icons {
+.form__check-input:focus + .form__check-icons {
   outline: 2px solid var(--logo-black);
   outline-offset: 1px;
   border-radius: 2px;
