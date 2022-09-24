@@ -1,0 +1,44 @@
+/**
+  |============================
+  | Skills
+  |============================
+*/
+
+.skills__list {
+  display: flex;
+  gap: 30px;
+}
+
+.skills__text {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+  text-transform: none;
+
+  color: var(--color-text);
+}
+
+.skills__icon {
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--button-bg-color);
+  border-radius: 4px;
+
+  margin-bottom: 30px;
+}
+
+.skills__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.no-padding {
+  padding-bottom: 0;
+}

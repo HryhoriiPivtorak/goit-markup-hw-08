@@ -1,0 +1,97 @@
+/**
+  |============================
+  | Приклади робіт
+  |============================
+*/
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.examples__project {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-color-txt);
+
+  margin-bottom: 4px;
+}
+
+/* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
+
+.examples__type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.examples__type {
+  color: var(--color-text);
+
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--bezier);
+}
+
+.examples__card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  transition-property: box-shadow;
+  transition-duration: var(--time);
+  transition-timing-function: var(--bezier);
+}
+
+.examples__card:hover,
+.examples__card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.examples__text-hidden {
+  position: relative;
+  overflow: hidden;
+}
+
+.examples__text {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  padding: 24px 24px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 294px;
+
+  background: var(--bg-example-works);
+
+  color: var(--button-white-txt);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  transform: translateY(100%);
+  transition: transform var(--time) var(--bezier);
+}
+
+.examples__card:hover .examples__text,
+.examples__card:focus .examples__text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.examples__work {
+  padding: 20px 24px;
+  border: 1px solid var(--works-border);
+  border-top: none;
+}

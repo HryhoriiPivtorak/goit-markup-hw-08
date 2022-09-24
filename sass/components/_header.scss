@@ -1,0 +1,117 @@
+/**
+  |============================
+  | Header
+  |============================
+*/
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list,
+.contacts {
+  display: flex;
+}
+
+.nav__list {
+  gap: 50px;
+}
+
+.nav {
+  margin-left: 93px;
+}
+
+.contacts {
+  margin-left: auto;
+  align-items: center;
+  gap: 30px;
+}
+
+.contacts .contacts__cont {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contacts__cont {
+  gap: 10px;
+}
+.contacts__cont {
+  color: var(--color-text);
+
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--bezier);
+}
+
+.contacts__icon {
+  align-self: center;
+  fill: currentColor;
+}
+
+.nav__list .nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--main-color-txt);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color var(--time) var(--bezier);
+}
+
+.nav__list .nav__link:hover,
+.nav__list .nav__link:focus,
+.contacts__cont:hover,
+.contacts__cont:focus {
+  color: var(--accent-color);
+}
+
+.nav__link.current {
+  color: var(--accent-color);
+}
+
+.nav__item {
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.contacts__item {
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.nav__link.current::after {
+  content: "";
+
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 4px;
+  background: var(--accent-color);
+
+  transition: width 500ms;
+}
+
+.contacts__icon {
+  fill: currentColor;
+}
+
+/* Сіренька смужечка під хедером */
+
+header {
+  border-bottom: 1px solid var(--header-border);
+}

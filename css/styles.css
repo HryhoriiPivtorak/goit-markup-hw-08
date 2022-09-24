@@ -91,7 +91,8 @@ img {
   list-style: none;
 }
 
-.link {
+.link,
+.cont {
   text-decoration: none;
 }
 
@@ -129,12 +130,12 @@ img {
   align-items: center;
 }
 
-.nav__list,
+.site-nav,
 .contacts {
   display: flex;
 }
 
-.nav__list {
+.site-nav {
   gap: 50px;
 }
 
@@ -158,9 +159,45 @@ img {
   gap: 10px;
 }
 
-.contacts__icon {
+.contacts__cont {
   align-self: center;
   fill: currentColor;
+}
+
+.nav__list .nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--main-color-txt);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color var(--time) var(--bezier);
+}
+
+.nav__link.current::after {
+  content: "";
+
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 4px;
+  background: var(--accent-color);
+
+  transition: width 500ms;
+}
+
+.nav__list .nav__link:hover,
+.nav__list .nav__link:focus,
+.contacts__cont:hover,
+.contacts__cont:focus {
+  color: var(--accent-color);
 }
 
 .skills__list {
@@ -201,7 +238,7 @@ img {
   margin-top: 9px;
 }
 
-.nav__list .nav__link {
+.site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -214,25 +251,24 @@ img {
   transition: color var(--time) var(--bezier);
 }
 
-.nav__list .nav__link:hover,
-.nav__list .nav__link:focus,
-.contacts__cont:hover,
-.contacts__cont:focus {
+.site-nav .link:hover,
+.site-nav .link:focus,
+.cont:hover,
+.cont:focus {
   color: var(--accent-color);
 }
 
-.nav__link.current {
+.link.current {
   color: var(--accent-color);
 }
 
-.nav__item,
-.contacts__item {
+.item {
   position: relative;
   padding-left: 3px;
   padding-right: 3px;
 }
 
-.nav__link.current::after {
+.link.current::after {
   content: "";
 
   position: absolute;
@@ -248,7 +284,7 @@ img {
   transition: width 500ms;
 }
 
-.contacts__icon {
+.icon-cont {
   fill: currentColor;
 }
 
@@ -297,15 +333,13 @@ header {
 .skills__text {
   font-weight: 400;
   line-height: 1.71;
-  letter-spacing: 0.02em;
   text-transform: none;
-
-  color: var(--color-text);
 }
 
+.skills__text,
 .person__prof,
-.examples__type,
-.contacts__cont {
+.work-list,
+.cont {
   color: var(--color-text);
 
   font-weight: 500;
@@ -523,7 +557,7 @@ header {
   |============================
 */
 
-.examples__project {
+.project {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -535,7 +569,7 @@ header {
 
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
 
-.examples__type {
+.work-list {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -687,7 +721,7 @@ header {
 
 /* Кнопка фільтру*/
 
-.buttons__item {
+.bt {
   color: var(--main-color-txt);
 
   font-family: inherit;
@@ -706,7 +740,7 @@ header {
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
 
-.hero__but {
+.hero__btn {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -730,14 +764,14 @@ header {
   transition: background-color var(--time) var(--bezier);
 }
 
-.hero__but:hover,
-.hero__but:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--button-active);
 }
 
 /* Кнопка фільтру не активна */
 
-.buttons__item.secondary {
+.bt.secondary {
   background-color: var(--button-bg-color);
 
   transition: color var(--time) var(--bezier),
@@ -747,9 +781,9 @@ header {
 
 /* Зміна кольору кнопок */
 
-.buttons__item.primery,
-.buttons__item.secondary:hover,
-.buttons__item.secondary:focus {
+.bt.primery,
+.bt.secondary:hover,
+.bt.secondary:focus {
   color: var(--button-white-txt);
   background-color: var(--accent-color);
 
@@ -757,7 +791,7 @@ header {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.buttons {
+.button-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -767,13 +801,13 @@ header {
 
 /* Сітка "Приклади робіт" */
 
-.examples {
+.example-work {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.examples__card {
+.example-item {
   display: block;
   position: relative;
   overflow: hidden;
@@ -783,17 +817,17 @@ header {
   transition-timing-function: var(--bezier);
 }
 
-.examples__card:hover,
-.examples__card:focus {
+.example-item:hover,
+.example-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.examples__text-hidden {
+.text-hidden {
   position: relative;
   overflow: hidden;
 }
 
-.examples__text {
+.example-item-txt {
   content: "";
   display: flex;
   justify-content: center;
@@ -819,13 +853,13 @@ header {
   /* opacity: 0; */
 }
 
-.examples__card:hover .examples__text,
-.examples__card:focus .examples__text {
+.example-item:hover .example-item-txt,
+.example-item:focus .example-item-txt {
   transform: translateY(0);
   opacity: 1;
 }
 
-.examples__work {
+.name-work {
   padding: 20px 24px;
   border: 1px solid var(--works-border);
   border-top: none;

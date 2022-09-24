@@ -1,0 +1,39 @@
+:root {
+  --accent-color: #2196f3;
+  --main-color-txt: #212121;
+  --main-bg-color: #fff;
+  --logo-black: #000000;
+  --button-white-txt: #fff;
+  --color-text: #757575;
+  --text-textarea: rgba(117, 117, 117, 0.502);
+  --button-bg-color: #f5f4fa;
+  --team-bg: #f5f4fa;
+  --hero-bg: #c4c4c4;
+  --footer-bg: #2f303a;
+  --header-border: #ececec;
+  --works-border: #eeeeee;
+  --button-active: #188ce8;
+  --gradient-color-start: #2f303a66;
+  --gradient-color-end: #2f303a66;
+  --background-icon: #f5f4fa;
+  --icon-fill: #afb1b8;
+  --background-icon-footer: rgba(255, 255, 255, 0.1);
+  --bg-position: rgba(47, 48, 58, 0.8);
+  --footer-text: rgba(255, 255, 255, 0.6);
+  --bg-example-works: rgba(33, 150, 243, 0.9);
+  --bg-modal: #fff;
+  --border-input: rgba(255, 255, 255, 0.3);
+  --border-input-modal: rgba(33, 33, 33, 0.2);
+
+  --time: 250ms;
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-color-txt);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}

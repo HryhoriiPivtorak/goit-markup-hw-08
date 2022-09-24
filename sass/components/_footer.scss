@@ -1,0 +1,149 @@
+/**
+  |============================
+  | Footer
+  |============================
+*/
+
+.footer {
+  padding: 60px 0;
+  background-color: var(--footer-bg);
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__item + .address__item {
+  margin-top: 9px;
+}
+
+.address__link {
+  color: var(--footer-text);
+
+  transition: color var(--time) var(--bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--button-white-txt);
+  }
+}
+
+/* Тип шрифту у футері */
+
+.address__list {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.address__text {
+  color: var(--button-white-txt);
+}
+
+.footer__info {
+  display: flex;
+  align-items: baseline;
+}
+
+.join {
+  margin-left: 70px;
+}
+
+.join__text,
+.subscription__text {
+  font-weight: 700;
+  color: var(--button-white-txt);
+  text-transform: uppercase;
+}
+
+.footer__logo,
+.join__text,
+.subscription__text {
+  margin-bottom: 20px;
+}
+
+/* Приєднуйтеся */
+
+.subscription {
+  margin-left: auto;
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: var(--footer-text);
+
+  border: 1px solid var(--border-input);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-bg);
+}
+
+.input-subscr::placeholder {
+  color: var(--placeholder-footer);
+}
+
+.subscription__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 200px;
+  padding: 10px 28px;
+  margin-left: 12px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--button-white-txt);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.subscription__icon {
+  margin-left: 10px;
+}
+
+.join__list {
+  display: flex;
+  gap: 10px;
+}
+
+.join__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--button-white-txt);
+  border-radius: 50%;
+  background-color: var(--background-icon-footer);
+
+  transition: background-color var(--time) var(--bezier);
+}
+
+.join__link:hover,
+.join__link:focus {
+  background-color: var(--accent-color);
+}
+
+.join__icon {
+  fill: currentColor;
+}
