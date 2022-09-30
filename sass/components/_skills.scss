@@ -4,18 +4,26 @@
   |============================
 */
 
-.skills__list {
-  display: flex;
-  gap: 30px;
+.section {
+  @include section;
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 0);
+  }
 }
 
-.skills__text {
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.02em;
-  text-transform: none;
+.skills__list {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    display: flex;
+    flex-wrap: wrap;
 
-  color: var(--color-text);
+    gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .skills__icon {
@@ -30,6 +38,15 @@
   margin-bottom: 30px;
 }
 
+.skills__text {
+  font-weight: 400;
+  line-height: 1.71;
+  // letter-spacing: 0.02em;
+  text-transform: none;
+
+  color: var(--color-text);
+}
+
 .skills__title {
   font-weight: 700;
   font-size: 14px;
@@ -37,8 +54,4 @@
   text-transform: uppercase;
 
   margin-bottom: 10px;
-}
-
-.no-padding {
-  padding-bottom: 0;
 }

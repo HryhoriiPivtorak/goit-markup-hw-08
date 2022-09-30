@@ -6,14 +6,24 @@
 
 /* Колір фону для секції "Наша команда" */
 
+.section {
+  @include section;
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
+}
+
 .team {
   background-color: var(--team-bg);
 }
 
 .team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .our-team__subtitle {

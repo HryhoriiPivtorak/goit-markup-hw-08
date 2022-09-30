@@ -67,16 +67,22 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
 }
-
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -314,19 +320,35 @@ header {
   | Skills
   |============================
 */
-.skills__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 0;
+  }
 }
 
-.skills__text {
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  color: var(--color-text);
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .skills__list {
+    width: 354px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .skills__icon {
@@ -345,6 +367,13 @@ header {
   margin-bottom: 30px;
 }
 
+.skills__text {
+  font-weight: 400;
+  line-height: 1.71;
+  text-transform: none;
+  color: var(--color-text);
+}
+
 .skills__title {
   font-weight: 700;
   font-size: 14px;
@@ -353,15 +382,24 @@ header {
   margin-bottom: 10px;
 }
 
-.no-padding {
-  padding-bottom: 0;
-}
-
 /**
   |============================
   | What we do
   |============================
 */
+@media screen and (max-width: 1199px) {
+  .our-work {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .our-work__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,17 +448,30 @@ header {
   |============================
 */
 /* Колір фону для секції "Наша команда" */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .team {
   background-color: var(--team-bg);
 }
 
-.team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .our-team__subtitle {
@@ -513,6 +564,17 @@ header {
   | Постійні клієнти
   |============================
 */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .clients {
   margin-bottom: 50px;
   font-weight: 700;
