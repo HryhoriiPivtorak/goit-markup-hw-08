@@ -5,6 +5,22 @@
 */
 
 .hero {
+  @media screen and (max-width: 767.5px) {
+    padding-bottom: 118px;
+    padding-top: 118px;
+    max-width: 480px;
+    height: 400px;
+    // margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 118px;
+    padding-top: 118px;
+    max-width: 768px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
   padding-bottom: 200px;
   padding-top: 200px;
   max-width: 1600px;
@@ -26,31 +42,46 @@
 /* Шрифт для h1 "Ефективні рішення" */
 
 .hero__title {
+  @media screen and (max-width: 1199px) {
+    @include fonts(900, 26px, 1.62, 0.06em);
+    width: 360px;
+  }
+
   width: 696px;
   margin: 0 auto 30px auto;
 
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+
+  @include fonts(900, 44px, 1.36, 0.06em);
+
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
 }
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
 
 .hero__btn {
+  @media screen and (max-width: 1199.5px) {
+    min-width: 200px;
+    padding: 10px 24px;
+  }
+
   display: flex;
   margin-left: auto;
   margin-right: auto;
 
-  font-weight: 700;
-  font-size: 16px;
-  font-family: inherit;
+  @include fonts(700, 16px, 1.88, 0.06em);
 
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  // font-weight: 700;
+  // font-size: 16px;
+  // line-height: 1.88;
+  // letter-spacing: 0.06em;
+
+  font-family: inherit;
   cursor: pointer;
 
   min-width: 216px;

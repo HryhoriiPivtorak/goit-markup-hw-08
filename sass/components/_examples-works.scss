@@ -5,16 +5,16 @@
 */
 
 .examples {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   gap: 30px;
 }
 
 .examples__project {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include fonts(700, 18px, 2, 0.06em);
+
   color: var(--main-color-txt);
 
   margin-bottom: 4px;
@@ -23,21 +23,27 @@
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
 
 .examples__type {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
-}
-
-.examples__type {
   color: var(--color-text);
 
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+  @include fonts(400, 16px, 1.88, 0.03em);
 
   transition-property: color;
   transition-duration: var(--time);
   transition-timing-function: var(--bezier);
+}
+
+.examples__item {
+  width: 450px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+
+  // flex-basis: calc(100% - 60px) / 3;
 }
 
 .examples__card {

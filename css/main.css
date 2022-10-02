@@ -33,8 +33,6 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-color-txt);
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
 }
 
 h1,
@@ -67,12 +65,16 @@ img {
 }
 
 .container {
-  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid red;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -101,159 +103,6 @@ img {
 
 /**
   |============================
-  | LOGO
-  |============================
-*/
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-}
-
-/*Перша частина логотипу */
-.logo__first {
-  color: var(--accent-color);
-}
-
-/* Друга частина логотипу */
-.logo__second {
-  color: var(--logo-black);
-}
-
-/* Друга частина логотипу у футері */
-.logo__second--white {
-  color: #fff;
-}
-
-/**
-  |============================
-  | Header
-  |============================
-*/
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav__list,
-.contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.nav__list {
-  gap: 50px;
-}
-
-.nav {
-  margin-left: 93px;
-}
-
-.contacts {
-  margin-left: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-
-.contacts .contacts__cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.contacts__cont {
-  gap: 10px;
-}
-
-.contacts__cont {
-  color: var(--color-text);
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: var(--time);
-          transition-duration: var(--time);
-  -webkit-transition-timing-function: var(--bezier);
-          transition-timing-function: var(--bezier);
-}
-
-.contacts__icon {
-  -ms-flex-item-align: center;
-      align-self: center;
-  fill: currentColor;
-}
-
-.nav__list .nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--main-color-txt);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  -webkit-transition: color var(--time) var(--bezier);
-  transition: color var(--time) var(--bezier);
-}
-
-.nav__list .nav__link:hover,
-.nav__list .nav__link:focus,
-.contacts__cont:hover,
-.contacts__cont:focus {
-  color: var(--accent-color);
-}
-
-.nav__link.current {
-  color: var(--accent-color);
-}
-
-.nav__item {
-  position: relative;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.contacts__item {
-  position: relative;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.nav__link.current::after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--accent-color);
-  -webkit-transition: width 500ms;
-  transition: width 500ms;
-}
-
-.contacts__icon {
-  fill: currentColor;
-}
-
-/* Сіренька смужечка під хедером */
-header {
-  border-bottom: 1px solid var(--header-border);
-}
-
-/**
-  |============================
   | Hero
   |============================
 */
@@ -270,6 +119,23 @@ header {
   background-size: cover;
   background-color: var(--hero-bg);
 }
+@media screen and (max-width: 767.5px) {
+  .hero {
+    padding-bottom: 118px;
+    padding-top: 118px;
+    max-width: 480px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    padding-bottom: 118px;
+    padding-top: 118px;
+    max-width: 768px;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
 
 /* Шрифт для h1 "Ефективні рішення" */
 .hero__title {
@@ -283,6 +149,15 @@ header {
   line-height: 1.36;
   letter-spacing: 0.06em;
 }
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    width: 360px;
+  }
+}
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
 .hero__btn {
@@ -293,9 +168,9 @@ header {
   margin-right: auto;
   font-weight: 700;
   font-size: 16px;
-  font-family: inherit;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  font-family: inherit;
   cursor: pointer;
   min-width: 216px;
   -webkit-box-align: center;
@@ -308,6 +183,12 @@ header {
   color: var(--button-white-txt);
   -webkit-transition: background-color var(--time) var(--bezier);
   transition: background-color var(--time) var(--bezier);
+}
+@media screen and (max-width: 1199.5px) {
+  .hero__btn {
+    min-width: 200px;
+    padding: 10px 24px;
+  }
 }
 
 .hero__btn:hover,
@@ -331,15 +212,17 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
   .skills__list {
-    width: 354px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 30px;
+  }
+  .skills__list .skills__item {
+    width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -367,19 +250,25 @@ header {
   margin-bottom: 30px;
 }
 
-.skills__text {
-  font-weight: 400;
-  line-height: 1.71;
-  text-transform: none;
-  color: var(--color-text);
-}
-
 .skills__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
+}
+
+.skills__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  line-height: 1.71;
+  text-transform: none;
+  color: var(--color-text);
 }
 
 /**
@@ -387,7 +276,7 @@ header {
   | What we do
   |============================
 */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.5px) {
   .our-work {
     display: none;
   }
@@ -463,7 +352,7 @@ header {
   background-color: var(--team-bg);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -475,10 +364,11 @@ header {
 }
 
 .our-team__subtitle {
-  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -490,6 +380,7 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -504,9 +395,10 @@ header {
 .person__prof {
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
-  margin-bottom: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .person__prof {
@@ -577,10 +469,24 @@ header {
 
 .clients {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .clients {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
 }
 
 .clients__list {
@@ -591,6 +497,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .clients__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .clients__link {
@@ -619,181 +531,6 @@ header {
 }
 
 .clients__icon {
-  fill: currentColor;
-}
-
-/**
-  |============================
-  | Footer
-  |============================
-*/
-.footer {
-  padding: 60px 0;
-  background-color: var(--footer-bg);
-}
-
-.address {
-  font-style: normal;
-}
-
-.address__item + .address__item {
-  margin-top: 9px;
-}
-
-.address__link {
-  color: var(--footer-text);
-  -webkit-transition: color var(--time) var(--bezier);
-  transition: color var(--time) var(--bezier);
-}
-.address__link:hover, .address__link:focus {
-  color: var(--button-white-txt);
-}
-
-/* Тип шрифту у футері */
-.address__list {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-}
-
-.address__text {
-  color: var(--button-white-txt);
-}
-
-.footer__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.join {
-  margin-left: 70px;
-}
-
-.join__text,
-.subscription__text {
-  font-weight: 700;
-  color: var(--button-white-txt);
-  text-transform: uppercase;
-}
-
-.footer__logo,
-.join__text,
-.subscription__text {
-  margin-bottom: 20px;
-}
-
-/* Приєднуйтеся */
-.subscription {
-  margin-left: auto;
-}
-
-.subscription__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.subscription__input {
-  width: 358px;
-  height: 50px;
-  padding: 15px 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--footer-text);
-  border: 1px solid var(--border-input);
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: var(--footer-bg);
-}
-
-.input-subscr::-webkit-input-placeholder {
-  color: var(--placeholder-footer);
-}
-
-.input-subscr::-moz-placeholder {
-  color: var(--placeholder-footer);
-}
-
-.input-subscr:-ms-input-placeholder {
-  color: var(--placeholder-footer);
-}
-
-.input-subscr::-ms-input-placeholder {
-  color: var(--placeholder-footer);
-}
-
-.input-subscr::placeholder {
-  color: var(--placeholder-footer);
-}
-
-.subscription__btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 200px;
-  padding: 10px 28px;
-  margin-left: 12px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  color: var(--button-white-txt);
-  background-color: var(--accent-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
-.subscription__icon {
-  margin-left: 10px;
-}
-
-.join__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-}
-
-.join__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 44px;
-  height: 44px;
-  color: var(--button-white-txt);
-  border-radius: 50%;
-  background-color: var(--background-icon-footer);
-  -webkit-transition: background-color var(--time) var(--bezier);
-  transition: background-color var(--time) var(--bezier);
-}
-
-.join__link:hover,
-.join__link:focus {
-  background-color: var(--accent-color);
-}
-
-.join__icon {
   fill: currentColor;
 }
 
@@ -1268,12 +1005,16 @@ label {
   |============================
 */
 .examples {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .examples {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .examples__project {
@@ -1287,22 +1028,31 @@ label {
 
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
 .examples__type {
+  color: var(--color-text);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-}
-
-.examples__type {
-  color: var(--color-text);
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: var(--time);
           transition-duration: var(--time);
   -webkit-transition-timing-function: var(--bezier);
           transition-timing-function: var(--bezier);
+}
+
+.examples__item {
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .examples__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples__item {
+    width: 370px;
+  }
 }
 
 .examples__card {

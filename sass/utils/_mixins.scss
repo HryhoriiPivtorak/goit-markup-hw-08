@@ -2,3 +2,14 @@
   padding-top: $pt;
   padding-bottom: $pb;
 }
+
+@mixin fonts($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin width($items: 3, $indent: 30px) {
+  flex-basis: calc(100% - $indent * ($items-1)) / $items;
+}

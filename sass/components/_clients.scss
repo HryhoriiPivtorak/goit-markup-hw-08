@@ -13,14 +13,26 @@
 }
 
 .clients {
+  @media screen and (max-width: 1199px) {
+    @include fonts(700, 28px, 1.17, 0.03em);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(700, 36px, 1.16, 0.03em);
+  }
+
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.17;
 }
 
 .clients__list {
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
   display: flex;
   gap: 30px;
   justify-content: center;
