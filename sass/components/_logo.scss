@@ -5,10 +5,12 @@
 */
 
 .logo {
+  @include fonts(700, 24px, 1.17);
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(700, 26px, 1.19);
+  }
 }
 
 /*Перша частина логотипу */

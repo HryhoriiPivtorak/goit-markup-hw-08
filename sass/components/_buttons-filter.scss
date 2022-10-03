@@ -5,7 +5,13 @@
 */
 
 .buttons {
+  @media screen and (max-width: 767px) {
+    width: 326px;
+    justify-content: flex-start;
+  }
+
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;

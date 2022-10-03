@@ -103,6 +103,42 @@ img {
 
 /**
   |============================
+  | LOGO
+  |============================
+*/
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  font-family: "Raleway", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
+
+/*Перша частина логотипу */
+.logo__first {
+  color: var(--accent-color);
+}
+
+/* Друга частина логотипу */
+.logo__second {
+  color: var(--logo-black);
+}
+
+/* Друга частина логотипу у футері */
+.logo__second--white {
+  color: #fff;
+}
+
+/**
+  |============================
   | Hero
   |============================
 */
@@ -536,6 +572,251 @@ img {
 
 /**
   |============================
+  | Footer
+  |============================
+*/
+.footer {
+  padding: 60px 0;
+  background-color: var(--footer-bg);
+}
+
+.address {
+  font-style: normal;
+}
+@media screen and (max-width: 1199px) {
+  .address {
+    text-align: center;
+  }
+}
+
+.address__item + .address__item {
+  margin-top: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .address__item + .address__item {
+    margin-top: 9px;
+  }
+}
+
+.address__link {
+  color: var(--footer-text);
+  -webkit-transition: color var(--time) var(--bezier);
+  transition: color var(--time) var(--bezier);
+}
+.address__link:hover, .address__link:focus {
+  color: var(--button-white-txt);
+}
+
+/* Тип шрифту у футері */
+.address__list {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address__list {
+    margin-bottom: 60px;
+  }
+}
+
+.address__text {
+  color: var(--button-white-txt);
+}
+
+@media screen and (min-width: 767px) {
+  .footer__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .join {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .join__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.join__text,
+.subscription__text {
+  font-weight: 700;
+  color: var(--button-white-txt);
+  text-transform: uppercase;
+}
+
+.footer__logo,
+.join__text,
+.subscription__text {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    text-align: center;
+  }
+}
+
+/* Приєднуйтеся */
+.subscription {
+  margin-left: auto;
+}
+@media screen and (max-width: 1199px) {
+  .subscription {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscription__text {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.subscription__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--footer-text);
+  border: 1px solid var(--border-input);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-bg);
+}
+@media screen and (max-width: 1199px) {
+  .subscription__input {
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+.input-subscr::-webkit-input-placeholder {
+  color: var(--placeholder-footer);
+}
+
+.input-subscr::-moz-placeholder {
+  color: var(--placeholder-footer);
+}
+
+.input-subscr:-ms-input-placeholder {
+  color: var(--placeholder-footer);
+}
+
+.input-subscr::-ms-input-placeholder {
+  color: var(--placeholder-footer);
+}
+
+.input-subscr::placeholder {
+  color: var(--placeholder-footer);
+}
+
+.subscription__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 200px;
+  padding: 10px 28px;
+  margin-left: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--button-white-txt);
+  background-color: var(--accent-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 1199px) {
+  .subscription__btn {
+    margin-left: 125px;
+  }
+}
+
+.subscription__icon {
+  margin-left: 10px;
+}
+
+.join__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.join__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--button-white-txt);
+  border-radius: 50%;
+  background-color: var(--background-icon-footer);
+  -webkit-transition: background-color var(--time) var(--bezier);
+  transition: background-color var(--time) var(--bezier);
+}
+
+.join__link:hover,
+.join__link:focus {
+  background-color: var(--accent-color);
+}
+
+.join__icon {
+  fill: currentColor;
+}
+
+/**
+  |============================
   | Modal window
   |============================
 */
@@ -960,6 +1241,14 @@ label {
   gap: 8px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .buttons {
+    width: 326px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 
 .buttons__item {
   color: var(--main-color-txt);
@@ -1024,6 +1313,14 @@ label {
   letter-spacing: 0.06em;
   color: var(--main-color-txt);
   margin-bottom: 4px;
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .examples__project {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
 }
 
 /* Розмір шрифту для прикладів дизайну у "Приклад робіт"  */
