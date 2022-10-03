@@ -139,6 +139,164 @@ img {
 
 /**
   |============================
+  | Header
+  |============================
+*/
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__list {
+  gap: 50px;
+}
+
+.nav {
+  margin-left: 88px;
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-left: 92px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+.contacts {
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts__cont {
+  gap: 10px;
+}
+
+.contacts__cont {
+  color: var(--color-text);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: var(--time);
+          transition-duration: var(--time);
+  -webkit-transition-timing-function: var(--bezier);
+          transition-timing-function: var(--bezier);
+}
+@media screen and (min-width: 768px) {
+  .contacts__cont {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__cont {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+.contacts__icon {
+  -ms-flex-item-align: center;
+      align-self: center;
+  fill: currentColor;
+}
+
+.nav__list .nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--main-color-txt);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color var(--time) var(--bezier);
+  transition: color var(--time) var(--bezier);
+}
+
+.nav__list .nav__link:hover,
+.nav__list .nav__link:focus,
+.contacts__cont:hover,
+.contacts__cont:focus {
+  color: var(--accent-color);
+}
+
+.nav__link.current {
+  color: var(--accent-color);
+}
+
+.nav__item {
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.contacts__item {
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.nav__link.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--accent-color);
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.contacts__icon {
+  fill: currentColor;
+}
+
+/* Сіренька смужечка під хедером */
+header {
+  border-bottom: 1px solid var(--header-border);
+}
+
+/**
+  |============================
   | Hero
   |============================
 */
