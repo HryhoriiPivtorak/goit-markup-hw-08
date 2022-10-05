@@ -876,7 +876,13 @@ header {
   border-radius: 4px;
   background-color: var(--footer-bg);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .subscription__input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscription__input {
     margin-bottom: 20px;
     width: 450px;
