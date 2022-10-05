@@ -18,6 +18,10 @@
 }
 
 .nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   margin-left: 88px;
 
   @media screen and (min-width: 1200px) {
@@ -32,6 +36,10 @@
 }
 
 .contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   margin-left: auto;
 
   @media screen and (min-width: 1200px) {
