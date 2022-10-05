@@ -37,17 +37,22 @@
 }
 
 .examples__item {
-  width: 450px;
-
-  @media screen and (min-width: 768px) {
-    width: 354px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
+  // width: 450px;
 
-  @media screen and (min-width: 1200px) {
-    width: 370px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   width: 354px;
+  // }
 
-  // flex-basis: calc(100% - 60px) / 3;
+  // @media screen and (min-width: 1200px) {
+  //   width: 370px;
+  // }
+
+  // flex-basis: calc((100% - 60px) / 3);
 }
 
 .examples__card {
