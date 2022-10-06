@@ -6,8 +6,9 @@
 
 .buttons {
   @media screen and (max-width: 767px) {
-    width: 326px;
+    width: 100%;
     justify-content: flex-start;
+    row-gap: 15px;
   }
 
   display: flex;

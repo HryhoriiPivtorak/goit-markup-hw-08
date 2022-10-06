@@ -100,9 +100,14 @@
 /* Шрифт для h1 "Ефективні рішення" */
 
 .hero__title {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
   @media screen and (max-width: 1199px) {
     @include fonts(900, 26px, 1.62, 0.06em);
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
   }
 
   width: 696px;
@@ -113,11 +118,6 @@
   text-align: center;
 
   @include fonts(900, 44px, 1.36, 0.06em);
-
-  // font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.36;
-  // letter-spacing: 0.06em;
 }
 
 /* Шрифт для КНОПКИ "Замовити послугу" */
